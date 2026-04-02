@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5142/api",
+  baseURL: "https://zyphor-server.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {

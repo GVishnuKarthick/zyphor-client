@@ -58,7 +58,7 @@ export default function App() {
   const unreadM = conversations.reduce((sum, c) => sum + (c.unread || 0), 0);
 const loadConversations = async () => {
   try {
-    const res = await fetch("http://localhost:5142/api/conversations", {
+    const res = await fetch("https://zyphor-server.onrender.com/api/conversations", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("zyphor_token")}`,
       },
@@ -88,7 +88,7 @@ const loadConversations = async () => {
 
 const loadUnreadCounts = async (convos) => {
   try {
-    const res = await fetch("http://localhost:5142/api/messages/unread-count", {
+    const res = await fetch("https://zyphor-server.onrender.com/api/messages/unread-count", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("zyphor_token")}`,
       },
@@ -200,7 +200,7 @@ useEffect(() => {
 
   const loadMessages = async () => {
     try {
-      const res = await fetch(`http://localhost:5142/api/messages/${selChat}`, {
+      const res = await fetch(`https://zyphor-server.onrender.com/api/messages/${selChat}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("zyphor_token")}`,
         },
@@ -541,7 +541,7 @@ const handleAddStory = async (image) => {
     }
 
     try {
-      const res = await fetch(`http://localhost:5142/api/users/${username}`, {
+      const res = await fetch(`https://zyphor-server.onrender.com/api/users/${username}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("zyphor_token")}`,
         },

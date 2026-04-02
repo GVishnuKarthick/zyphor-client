@@ -17,7 +17,7 @@ export const startConnection = async (userId) => {
   }
 
   connection = new signalR.HubConnectionBuilder()
-    .withUrl(`http://localhost:5142/chathub?userId=${userId}`)
+    .withUrl(`https://zyphor-server.onrender.com/chathub?userId=${userId}`)
     .withAutomaticReconnect()
     .build();
 
