@@ -34,7 +34,7 @@ export default function MessagesPanel({
     const delay = setTimeout(async () => {
       try {
         const res = await fetch(
-          `https://zyphor-server.onrender.com/api/users/search?q=${q}`,
+          `https://zyphor-server-1.onrender.com/api/users/search?q=${q}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("zyphor_token")}`,
@@ -91,7 +91,7 @@ export default function MessagesPanel({
     }
 
     try {
-      const res = await fetch("https://zyphor-server.onrender.com/api/conversations", {
+      const res = await fetch("https://zyphor-server-1.onrender.com/api/conversations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

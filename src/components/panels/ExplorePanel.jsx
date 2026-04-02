@@ -14,7 +14,7 @@ export default function ExplorePanel({ posts, onViewProfile }) {
 
     const delay = setTimeout(async () => {
       try {
-        const res = await fetch(`https://zyphor-server.onrender.com/api/users/search?q=${query}`, {
+        const res = await fetch(`https://zyphor-server-1.onrender.com/api/users/search?q=${query}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("zyphor_token")}`,
           },
